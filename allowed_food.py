@@ -28,8 +28,9 @@ def scrape_foods():
     chrome_options.add_argument("--disable-dev-shm-usage")  # Overcome limited resource problems.
 
     # Heroku paths for ChromeDriver and Chrome binary
-    chrome_bin_path = '/app/.apt/usr/bin/google-chrome'
-    chrome_driver_path = '/app/.chromedriver/bin/chromedriver'
+    # Correct paths for Chrome for Testing
+    chrome_bin_path = '/app/.chrome-for-testing/chrome-linux64/chrome'
+    chrome_driver_path = '/app/.chrome-for-testing/chromedriver-linux64/chromedriver'
 
     # Set binary location
     chrome_options.binary_location = chrome_bin_path
