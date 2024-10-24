@@ -50,7 +50,7 @@ def scrape_foodsJP():
     driver.get("https://usf.campusdish.com/LocationsAndMenus/Tampa/JuniperDining")
 
     # Wait for the page to fully load. Adjust time if necessary.
-    WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.CSS_SELECTOR, "p[data-testid='product-card-description']")))
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, "p[data-testid='product-card-description']")))
 
     # Get the page source
     page_to_scrape = driver.page_source

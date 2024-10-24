@@ -45,14 +45,13 @@ def scrape_foods():
     # Set up the ChromeDriver service
     service = Service(chrome_driver_path)
 
-    # Set up the Selenium WebDriver with the correct path
-    driver = webdriver.Chrome(service=service)
+
 
     # Fetch the web page
     driver.get("https://usf.campusdish.com/en/locationsandmenus/tampa/thehub/")
 
     # Wait for the page to fully load. Adjust time if necessary.
-    WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.CSS_SELECTOR, "p[data-testid='product-card-description']")))
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, "p[data-testid='product-card-description']")))
 
     # Get the page source
     page_to_scrape = driver.page_source
