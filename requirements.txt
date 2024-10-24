@@ -5,4 +5,5 @@ APScheduler
 pytz
 asyncpg
 selenium
+python-dotenv
 beautifulsoup4
