@@ -59,7 +59,7 @@ def scrape_foodsJP():
     soup = BeautifulSoup(page_to_scrape, "html.parser")
 
     # Find all restaurants
-    ids = ["10993", "13890", "10997", "10996", "13889", "10995"]
+    ids = ["10993", "13890", "10997", "10996", "13889", "10995", "10992", "10999", "10998", "10994"]
     restaurants = []
     for element_id in ids:
         element = soup.find("div", id=element_id)
